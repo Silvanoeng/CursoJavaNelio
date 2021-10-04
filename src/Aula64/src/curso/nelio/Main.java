@@ -35,7 +35,6 @@ public class Main {
         else {
             System.out.println("Larger area: Y.");
         }
-
         sc.close();
     }
 }
