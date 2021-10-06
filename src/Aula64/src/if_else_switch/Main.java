@@ -2,6 +2,7 @@ package if_else_switch;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,12 +20,30 @@ public class Main {
         }
         System.out.println("Fim da execução.");
 
-        int s, n1, n2, n3, n4;
-        s = 5000;
-        n1 = s/1000;
-        n2 = (s%1000)/100;
-        n3 = (s%100)/10;
-        n4 = s%10;
-        System.out.println(s + " * " + n1 + " * " + n2 + " * " + n3 + " * " + n4);
+        Integer nuns, n1, n2, n3, n4;
+        ArrayList<Integer> numeroEscolhido = new ArrayList();
+
+        for (Integer i=1000; i<10000; i++) {
+
+            nuns = i;
+            n1 = nuns / 1000;
+            n2 = (nuns % 1000) / 100;
+            n3 = (nuns % 100) / 10;
+            n4 = nuns % 10;
+            Integer somaDeN = n1 + n2 + n3 + n4;
+            if (n1 < 7 && n2 < 7 && n3 < 7 && n4 < 7 && somaDeN==21){
+                numeroEscolhido.add(nuns);
+            }
+            else {
+
+            }
+        }
+        for (Integer num : numeroEscolhido) {
+
+            System.out.println(num);
+
+        }
+
+
     }
 }
