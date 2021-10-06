@@ -20,30 +20,42 @@ public class Main {
         }
         System.out.println("Fim da execução.");
 
-        Integer nuns, n1, n2, n3, n4;
-        ArrayList<Integer> numeroEscolhido = new ArrayList();
+        String cartao = "Master";
 
-        for (Integer i=1000; i<10000; i++) {
-
-            nuns = i;
-            n1 = nuns / 1000;
-            n2 = (nuns % 1000) / 100;
-            n3 = (nuns % 100) / 10;
-            n4 = nuns % 10;
-            Integer somaDeN = n1 + n2 + n3 + n4;
-            if (n1 < 7 && n2 < 7 && n3 < 7 && n4 < 7 && somaDeN==21){
-                numeroEscolhido.add(nuns);
-            }
-            else {
-
-            }
-        }
-        for (Integer num : numeroEscolhido) {
-
-            System.out.println(num);
-
+        switch (cartao) {
+            case "Master":
+                System.out.println("Processa Master...");
+                break;
+            case "Visa":
+                System.out.println("Processa Visa...");
+                break;
+            case "Amex:":
+                System.out.println("Processa Amex...");
+                break;
+            case "Elo":
+                System.out.println("Processa Elo...");
+                break;
+            default:
+                System.out.println("Não sei o cartão.");
         }
 
+        int mes = 2;
+
+        switch (mes) {
+            case 1: case 3: case 5:
+            case 7: case 8: case 10:
+            case 12:
+                System.out.println("Mês com 31 dias.");
+                break;
+            case 4: case 6:
+            case 9: case 11:
+                System.out.println("Mês com 30 dias.");
+                break;
+            case 2:
+                System.out.println("Fevereiro pode ter 28 ou 29 dias.");
+                break;
+
+        }
 
     }
 }
