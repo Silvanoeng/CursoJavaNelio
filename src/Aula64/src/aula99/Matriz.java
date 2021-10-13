@@ -15,9 +15,30 @@ public class Matriz {
                 matriz[li][co]= sc.nextInt();
             }
         }
+        System.out.println("-----------------------------------------------------");
 
-        System.out.println(matriz);
-    sc.close();
+        for (int i=0;i<n;i++){
+            System.out.print(matriz[i][i]+" ");
+        }
+
+        System.out.println("\n-----------------------------------------------------");
+        int cont=0;
+        for (int li=0; li<n; li++){
+            for (int co=0; co<n; co++){
+                if(matriz[li][co]<0) {
+                 cont++;
+                }
+            }
+        }
+        System.out.println(cont +" é a quantidade de números negativos na matriz.");
+        System.out.println("-----------------------------------------------------");
+        for (int li=0; li<n; li++){
+            for (int co=0; co<n; co++){
+                System.out.print(matriz[li][co]+" ");
+            }
+            System.out.println("\n");
+        }
+        sc.close();
     }
 
 }
