@@ -70,8 +70,8 @@ public class Conta {
 
     @Override
     public String toString() {
-        return "Número da conta:" + numeroConta +
-                ", nome:'" + nome + '\'' +
-                ", saldo:" + saldo;
+        return String.format("Número da conta: %03d", numeroConta) +
+                ", nome: " + nome +
+                ", saldo: " + saldo;
     }
 }
