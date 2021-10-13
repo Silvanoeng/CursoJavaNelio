@@ -1,4 +1,4 @@
-package curso.nelio;
+package Aula64.src.curso.nelio;
 
 public class Triangle {
     private double ladoA;

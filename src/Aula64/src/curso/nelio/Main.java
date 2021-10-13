@@ -1,4 +1,4 @@
-package curso.nelio;
+package Aula64.src.curso.nelio;
 
 import java.util.Locale;
 import java.util.Scanner;
