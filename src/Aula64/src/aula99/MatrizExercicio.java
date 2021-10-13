@@ -38,6 +38,7 @@ public class MatrizExercicio {
             for (int co=0; co<matriz[li].length; co++){
 
                 if(numeroEscolhido==matriz[li][co]) {
+                    System.out.println("Posição "+li+", "+co+".");
                     if(co>0) {
                         Integer numEsq = matriz[li][co - 1];
                         System.out.println("A esquerda: " + numEsq);
