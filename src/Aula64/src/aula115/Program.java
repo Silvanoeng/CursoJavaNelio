@@ -9,5 +9,8 @@ public class Program {
         Order order = new Order(1002, LocalDate.now(), OrderStatus.PENDING_PAYMENT);
 
         System.out.println(order);
+
+        order.setStatus(OrderStatus.valueOf("DELIVERED"));
+        System.out.println(order);
     }
 }
