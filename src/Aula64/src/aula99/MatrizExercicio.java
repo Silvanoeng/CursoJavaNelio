@@ -31,7 +31,7 @@ public class MatrizExercicio {
         int numeroEscolhido = sc.nextInt();
 
         System.out.println("\n-----------------------------------------------------");
-        
+
         for (int li=0; li<matriz.length; li++){
             for (int co=0; co<matriz[li].length; co++){
 
