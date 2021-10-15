@@ -70,12 +70,16 @@ public class Post {
 
     @Override
     public String toString() {
-        return "Post{" +
-                "moment=" + moment.format(DateTimeFormatter.ofPattern("dd/MM/yyyy") )+
-                ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                ", likes=" + likes +
-                ", comment=" + getComment() +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append(title + "\n");
+        sb.append(likes);
+        sb.append(" Likes - ");
+        sb.append(moment.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + "\n");
+        sb.append(content + "\n");
+        sb.append("Comments: \n");
+        for (Comment c : comment) {
+            sb.append(c.getText() + "\n");
+        }
+        return sb.toString();
     }
 }
