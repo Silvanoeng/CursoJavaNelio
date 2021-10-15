@@ -1,6 +1,8 @@
 package Aula64.src.aula120;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -15,9 +17,11 @@ public class Post {
         this.moment = moment;
         this.title = title;
         this.content = content;
+        this.comment = new ArrayList<>();
     }
 
     public Post() {
+        this.comment = new ArrayList<>();
     }
 
     public LocalDate getMoment() {
@@ -53,7 +57,25 @@ public class Post {
     }
 
     public List<Comment> getComment() {
-        return comment;
+       return comment;
     }
-    
+
+    public void addComment(Comment comment) {
+        this.comment.add(comment);
+    }
+
+    public void removeComment(Comment comment) {
+        this.comment.remove(comment);
+    }
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "moment=" + moment.format(DateTimeFormatter.ofPattern("dd/MM/yyyy") )+
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", likes=" + likes +
+                ", comment=" + getComment() +
+                '}';
+    }
 }
